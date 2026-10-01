@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Samuel Brynord – Full Stack Developer</title>
+<meta name="description" content="Portfolio of Samuel Brynord, a full stack developer looking for internships and open to new projects.">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F1E9;--ink:#141414;--paper:#FBF8F3;--muted:#6B645C;--line:#D9D2C6;--accent:#C8643F;--on-accent:#F6F1E9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151210;--ink:#F2EBE0;--paper:#1D1A17;--muted:#A39A8D;--line:#3A342D;--accent:#E0764F;--on-accent:#151210}}
+:root[data-theme="dark"]{--bg:#151210;--ink:#F2EBE0;--paper:#1D1A17;--muted:#A39A8D;--line:#3A342D;--accent:#E0764F;--on-accent:#151210}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+main{max-width:1100px;margin:0 auto;padding:28px 24px 64px}
+.top{display:flex;justify-content:space-between;gap:16px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.top span:last-child{border-bottom:1px solid var(--ink);padding-bottom:2px}
+h1{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(56px,23.5vw,262px);line-height:.95;letter-spacing:.005em;text-transform:uppercase;margin:18px 0 0}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:40px}
+.hello{font-size:15px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+.name{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(46px,8vw,84px);line-height:.95;text-transform:uppercase;margin:0 0 16px}
+.role{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 14px}
+.intro{max-width:40ch;margin:0 0 6px;color:var(--muted)}
+.sig{font-family:"Mrs Saint Delafield",cursive;font-size:56px;line-height:1;margin:6px 0 0}
+.orb{position:relative;aspect-ratio:1;width:min(100%,440px);margin-left:auto;border-radius:50%;background:var(--accent);display:grid;place-items:center}
+.mono{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(46px,9vw,88px);color:var(--on-accent);line-height:1.02;text-align:center}
+.badge{position:absolute;left:-6%;bottom:8%;width:clamp(96px,16vw,130px);color:var(--accent)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:48px 0 20px}
+.head h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(30px,5vw,42px);line-height:1;text-transform:uppercase;margin:0}
+.head h2 em{display:block;font-style:normal;color:var(--accent)}
+.head p{margin:0;max-width:30ch;font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.thumb{aspect-ratio:1/.8;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-family:"Cormorant Garamond",Georgia,serif;font-size:30px;line-height:1.05;text-transform:uppercase;background:#161616;color:#F3ECE2}
+.pd{font-size:14px;color:var(--muted);margin:10px 0 0}
+a{color:var(--ink);text-underline-offset:3px;text-decoration-color:var(--accent)}
+.cols{display:grid;grid-template-columns:1.1fr 1fr 1.1fr;gap:0;border-top:1px solid var(--line);margin-top:48px;padding-top:32px}
+.cols>div{padding:0 28px}
+.cols>div:first-child{padding-left:0}
+.cols>div+div{border-left:1px solid var(--line)}
+.cols .head{margin:0 0 20px}
+.grp h3{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.tags{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tags li{border:1px solid var(--line);padding:2px 11px;font-size:14px}
+.quote{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(24px,3vw,30px);line-height:1.25;margin:0}
+.quote:before{content:"\201C";display:block;color:var(--accent);font-size:64px;line-height:.8}
+.st{display:flex;gap:14px;margin-bottom:16px}
+.ic{flex:none;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-size:16px}
+.st strong{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.st p{margin:0;font-size:13px;color:var(--muted)}
+.foot{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
+.foot h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(32px,5vw,46px);line-height:1;text-transform:uppercase;margin:0 0 8px}
+.foot h2 em{display:block;font-style:normal;color:var(--accent)}
+.foot p{margin:0;color:var(--muted);font-size:14px}
+.ct p{display:flex;align-items:center;gap:12px;margin:0 0 10px;color:var(--ink);font-size:15px}
+.ct .i{flex:none;width:28px;text-align:center;color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (max-width:820px){
+.hero{grid-template-columns:1fr}
+.orb{margin:0 auto;width:min(86%,360px)}
+.cols{grid-template-columns:1fr;gap:36px}
+.cols>div{padding:0}
+.cols>div+div{border-left:0;border-top:1px solid var(--line);padding-top:32px}
+.foot{grid-template-columns:1fr}
+.head{flex-direction:column;align-items:flex-start;gap:8px}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="top"><span>✱ Full Stack Developer</span><span>Looking for internships</span></div>
+  <h1>Portfolio</h1>
+
+  <div class="hero">
+    <div>
+      <p class="hello">Hello, I'm</p>
+      <h2 class="name">Samuel Brynord</h2>
+      <p class="role">Full Stack Developer</p>
+      <p class="intro">I’m egoistic about learning and building. As a Full Stack Developer, I learned to do things the hard way, embraced AI to stay ahead of the curve, and turned both into a habit of shipping things that actually work.</p>
+      <p class="sig" aria-hidden="true">Samuel Brynord</p>
+    </div>
+    <div class="orb">
+      <span class="mono">Learn.<br>Build.<br>Ship.</span>
+      <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="ring" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+        <circle cx="60" cy="60" r="59" fill="var(--bg)" stroke="var(--line)"/>
+        <text font-size="8.5" font-weight="600" fill="currentColor"><textPath href="#ring" textLength="280" lengthAdjust="spacing">OPEN FOR NEW PROJECTS • OPEN FOR NEW PROJECTS • </textPath></text>
+        <text x="60" y="68" text-anchor="middle" font-size="26" fill="currentColor">✱</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="head"><h2>Selected <em>projects</em></h2><p>Things I have built and what I learned from them.</p></div>
+  <div class="cards">
+    <article>
+      <div class="thumb" aria-hidden="true">Coming soon</div>
+      <p class="pd">My first showcase projects are on the way. Check back soon.</p>
+    </article>
+  </div>
+
+  <div class="cols">
+    <div>
+      <div class="head"><h2>Skills &amp; <em>expertise</em></h2></div>
+      <div class="grp"><h3>Frontend</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React.js</li></ul></div>
+      <div class="grp"><h3>Backend</h3><ul class="tags"><li>Node.js</li><li>Express.js</li><li>Python</li><li>Java</li><li>APIs</li></ul></div>
+      <div class="grp"><h3>Data and tools</h3><ul class="tags"><li>SQL databases</li><li>Docker</li><li>Git &amp; GitHub</li></ul></div>
+    </div>
+    <div><p class="quote">I learn things the hard way, use AI to move faster, and ship work that holds up.</p></div>
+    <div>
+      <div class="st"><span class="ic" aria-hidden="true">✦</span><div><strong>Learns by building</strong><p>Picks up new tools by making real things with them.</p></div></div>
+      <div class="st"><span class="ic" aria-hidden="true">✦</span><div><strong>Uses AI well</strong><p>Works with AI to move faster and stay ahead.</p></div></div>
+      <div class="st"><span class="ic" aria-hidden="true">✦</span><div><strong>Ships what works</strong><p>Focused on software that actually runs and gets used.</p></div></div>
+      <div class="st"><span class="ic" aria-hidden="true">✦</span><div><strong>Full stack range</strong><p>From the interface to the API, database and container.</p></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div><h2>Let's create <em>something great</em></h2><p>Looking for an internship, or have a project in mind? Get in touch.</p></div>
+    <div class="ct">
+      <p><span class="i" aria-hidden="true">✉</span><a href="mailto:samuel.brynordd@gmail.com">samuel.brynordd@gmail.com</a></p>
+      <p><span class="i" aria-hidden="true">☏</span><a href="tel:+919491928253">9491928253</a></p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
